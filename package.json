@@ -1,0 +1,23 @@
+{
+  "name": "substack-reader",
+  "version": "0.1.0",
+  "description": "A simple email client for reading substack newsletters",
+  "main": "./main/index.js",
+  "scripts": {
+      "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tbliu/substack-reader.git"
+  },
+  "keywords": [],
+  "author": "Timothy Liu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tbliu/substack-reader/issues"
+  },
+  "homepage": "https://github.com/tbliu/substack-reader#readme",
+  "devDependencies": {
+    "electron": "^11.2.0"
+  }
+}
