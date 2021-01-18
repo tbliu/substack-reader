@@ -15,10 +15,12 @@ imap.login(imap_user, imap_pass)
 
 imap.select('Inbox')
 
-tmp, data = imap.search(None, 'ALL')
+tmp, data = imap.search(None, 'FROM', '"substack"')
+mailboxes = imap.list()
+print(mailboxes)
 for num in data[0].split():
     tmp, data = imap.fetch(num, '(RFC822)')
-    print('Message: {0}\n'.format(num))
-    pprint.pprint(data[0][1])
+    # pprint.pprint(data[0][1])
+    print('Message %s\n%s\n' % (num, data[0][1]))
     break
 imap.close()

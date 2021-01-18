@@ -1,23 +1,41 @@
 {
-  "name": "substack-reader",
+  "name": "main",
   "version": "0.1.0",
-  "description": "A simple email client for reading substack newsletters",
-  "main": "./main/index.js",
+  "private": true,
+  "main": "public/main.js",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/user-event": "^12.6.0",
+    "electron": "^11.2.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4"
+  },
   "scripts": {
-      "start": "electron ."
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron-dev": "electron ."  
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tbliu/substack-reader.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "keywords": [],
-  "author": "Timothy Liu",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tbliu/substack-reader/issues"
-  },
-  "homepage": "https://github.com/tbliu/substack-reader#readme",
-  "devDependencies": {
-    "electron": "^11.2.0"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
